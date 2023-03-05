@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "252750655445",
+    "project_id": "fabes-mobile-v2",
+    "storage_bucket": "fabes-mobile-v2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252750655445:android:0738390c52c76099b0975c",
+        "android_client_info": {
+          "package_name": "chiapas.snte.mx.fabesmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252750655445-qs9nmuui22j093h6nlh3u240qt0pbo7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "chiapas.snte.mx.fabesmobile",
+            "certificate_hash": "f58a216dd3eadd9b4f8f4477fb3c5ccf200addca"
+          }
+        },
+        {
+          "client_id": "252750655445-09aqe6v7b7ferk7dddppil43j8f9tkr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARWgndaFWHIemlOSFCK40dOjanMMBVFh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252750655445-09aqe6v7b7ferk7dddppil43j8f9tkr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

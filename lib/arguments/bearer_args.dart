@@ -1,0 +1,9 @@
+export 'package:fabes/arguments/activacion_cuenta_args.dart';
+export 'package:fabes/arguments/mensajes_args.dart';
+export 'package:fabes/arguments/recuperar_contrasena_args.dart';
+export 'package:fabes/arguments/prestamos_detalle_args.dart';
+export 'package:fabes/arguments/registro_sms_args.dart';
+export 'package:fabes/arguments/registro_args.dart';
+export 'package:fabes/arguments/inicio_args.dart';
+export 'package:fabes/arguments/ahorros_detalles_args.dart';
+export 'package:fabes/arguments/mis_prestamos_detalle.dart';

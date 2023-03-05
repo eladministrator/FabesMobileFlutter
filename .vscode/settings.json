@@ -1,0 +1,9 @@
+{
+    "editor.minimap.maxColumn": 100,
+    "editor.wordWrapColumn": 100,
+    "window.autoDetectColorScheme": false,
+    "window.zoomLevel": 0.5227586988632231,
+    "editor.wordWrap": "off",
+    "editor.defaultFormatter": "Dart-Code.flutter",
+    "editor.formatOnSave": true
+}

@@ -1,0 +1,12 @@
+export 'package:fabes/screens/activar_cuenta/activar_cuenta_sms.dart';
+export 'package:fabes/screens/mensajes/mensajes.dart';
+export 'package:fabes/screens/recuperar_contrasena/recuperar_contrasena.dart';
+export 'package:fabes/screens/login.dart';
+export 'package:fabes/screens/registro/registro.dart';
+export 'package:fabes/screens/registro/rfc.dart';
+export 'package:fabes/screens/registro/registro_sms.dart';
+export 'package:fabes/screens/registro/registro_gracias.dart';
+export 'package:fabes/screens/inicio.dart';
+export 'package:fabes/screens/prestamos/prestamosx.dart';
+export 'package:fabes/screens/prestamos/prestamos_detalle.dart';
+export 'package:fabes/screens/ahorros/ahorros_detalle.dart';

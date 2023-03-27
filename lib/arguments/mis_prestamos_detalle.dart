@@ -8,6 +8,7 @@ class MisPrestamosDetalle {
   final int fkckmododedescuento;
   final double saldo;
   final double pagado;
+  final String tipo;
 
-  MisPrestamosDetalle({this.capital = 0.0, this.interes = 0.0, this.fondoGarantia = 0.0, this.total = 0.0, this.descuentoQuincenal = 0.0, this.idCredito = 0, this.fkckmododedescuento = 0, this.saldo = 0, this.pagado = 0.0});
+  MisPrestamosDetalle({this.capital = 0.0, this.interes = 0.0, this.fondoGarantia = 0.0, this.total = 0.0, this.descuentoQuincenal = 0.0, this.idCredito = 0, this.fkckmododedescuento = 0, this.saldo = 0, this.pagado = 0.0, this.tipo = ''});
 }

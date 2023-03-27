@@ -28,17 +28,145 @@ class CardPrestamos extends StatelessWidget {
       child: ListTile(
         minVerticalPadding: 15,
         //leading: FlutterLogo(size: 56.0),
-        title: Text('Folio:      ${datum.folio}', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: Color.fromRGBO(255, 102, 0, 1))),
-        subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(
-            'Plazo:      ${datum.plazo} qnas. ',
-            style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
-            textAlign: TextAlign.left,
+        title:
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Folio: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  datum.folio,
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 18, letterSpacing: 1),
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
           ),
-          Text('Capital:   \$${formatear.format(datum.capital)}', style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
-          Text('Estatus:   ${datum.estatus}', style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
-          Text('Tipo:        ${datum.tipoDescuento}', style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
-          //Text('Pagado:        ${datum.pagado}', style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 15)),
+
+        subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+         // Plazo
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Plazo: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  '${datum.plazo} quincenas',
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+          //const SizedBox(height: 2),
+          // Capital
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Capital: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  '\$${formatear.format(datum.capital)}',
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+          //const SizedBox(height: 2),
+          //Estatus
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Estatus: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  datum.estatus,
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+          //const SizedBox(height: 2),
+          //Tipo
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Tipo: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  datum.tipoDescuento,
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+          // Quincena inicial
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Qna. inicial: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  datum.quincenainicial.toString(),
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+          // Quincena inicial
+          Row(
+            children: [
+              const Expanded(
+                child: Text(
+                  'Qna. final: ',
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontSize: 16, letterSpacing: 1),
+                  datum.quincenafinal.toString(),
+                  textAlign: TextAlign.right,
+                ),
+              )
+            ],
+          ),
+
         ]),
 
         trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Color.fromRGBO(255, 102, 0, 1), size: 35),
@@ -53,11 +181,11 @@ class CardPrestamos extends StatelessWidget {
 
           //MisPrestamosDetalle s = MisPrestamosDetalle(idCredito: datum.id, capital: datum.capital, interes: datum.interes, fondoGarantia: datum.fg, total: datum.total, descuentoQuincenal: datum.descuentoquincenal);
 
-          debugPrint('MisPrestamosDetalle: ${datum.id},${datum.capital}');
+          debugPrint('tipoDescuento: ${datum.tipoDescuento}');
 
           // ignore: use_build_context_synchronously
           Navigator.pushNamed(context, "prestamos_detalle",
-              arguments: MisPrestamosDetalle(idCredito: datum.id, capital: datum.capital, interes: datum.interes, fondoGarantia: datum.fg, total: datum.total, descuentoQuincenal: datum.descuentoquincenal, fkckmododedescuento: datum.fkckmododedescuento, saldo: datum.saldo, pagado: datum.pagado));
+              arguments: MisPrestamosDetalle(idCredito: datum.id, capital: datum.capital, interes: datum.interes, fondoGarantia: datum.fg, total: datum.total, descuentoQuincenal: datum.descuentoquincenal, fkckmododedescuento: datum.fkckmododedescuento, saldo: datum.saldo, pagado: datum.pagado, tipo: datum.tipoDescuento));
         },
       ),
     );

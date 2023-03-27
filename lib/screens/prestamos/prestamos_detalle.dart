@@ -22,6 +22,8 @@ class _PrestamosDetalleScreenState extends State<PrestamosDetalleScreen> {
     var formatear = NumberFormat('###,###.00', 'en_US');
     final pantalla = MediaQuery.of(context).size;
 
+
+
     return MaterialApp(
       home: DefaultTabController(
         length: 3,
@@ -34,15 +36,16 @@ class _PrestamosDetalleScreenState extends State<PrestamosDetalleScreen> {
                   }),
               //automaticallyImplyLeading: true,
               elevation: 10,
-              bottom: const TabBar(
+              bottom: TabBar(
                 indicatorWeight: 3,
                 indicatorPadding: EdgeInsets.all(10),
                 indicatorColor: Colors.white,
                 tabs: [
                   //Tab(icon: Icon(Icons.credit_card)),
-                  Tab(text: 'Resumen', icon: Icon(Icons.credit_card)),
-                  Tab(text: 'Pagos', icon: Icon(Icons.payments)),
-                  Tab(text: 'Rechazos', icon: Icon(Icons.developer_board_off_outlined, color: Colors.white)),
+                  const Tab(text: 'Resumen', icon: Icon(Icons.credit_card)),
+                  const Tab(text: 'Pagos', icon: Icon(Icons.payments)),
+                  if ( args.tipo != 'NOMINA')
+                   const Tab(text: 'Rechazos', icon: Icon(Icons.developer_board_off_outlined, color: Colors.white))
                 ],
               ),
               title: const Text('Regresar a Prestamos'),
